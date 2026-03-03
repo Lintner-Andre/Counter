@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #252525;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.minus {
+  font-size: 5rem;
+  background-color: red;
+}
+
+.plus {
+  font-size: 5rem;
+  background-color: green;
+}
+
+.number {
+  font-size: 5rem;
+  color: #252525;
+  background-color: #fff;
+}

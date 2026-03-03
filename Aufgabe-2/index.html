@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      var count = 0;
+      function addnumber() {
+        count++;
+        console.log(count);
+        var element = document.getElementById("number");
+        element.innerHTML = count;
+        console.log(element);
+      }
+
+      function minusnumber() {
+        count--;
+        console.log(count);
+        var element = document.getElementById("number");
+        element.innerHTML = count;
+        console.log(element);
+      }
+    </script>
+  </head>
+  <body>
+    <button class="minus all" onclick="minusnumber()">-</button
+    ><span id="number" class="number all">0</span
+    ><button class="plus all" onclick="addnumber()">+</button>
+  </body>
+</html>
