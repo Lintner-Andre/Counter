@@ -11,69 +11,91 @@
       <div class="calculator-container">
         <h1>Preisrechner</h1>
         <div class="order-buttons-grid">
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Pizza', 12.5)">
             <span class="order-button-item">Pizza</span
-            ><span class="order-button-item-price">12.99 €</span>
+            ><span class="order-button-item-price">12.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Burger', 10.0)">
             <span class="order-button-item">Burger</span
-            ><span class="order-button-item-price">10.99 €</span>
+            ><span class="order-button-item-price">10.00€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Salat', 8.5)">
             <span class="order-button-item">Salat</span
-            ><span class="order-button-item-price">8.99 €</span>
+            ><span class="order-button-item-price">8.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Nudeln', 9.5)">
             <span class="order-button-item">Nudeln</span
-            ><span class="order-button-item-price">9.99 €</span>
+            ><span class="order-button-item-price">9.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Suppe', 6.5)">
             <span class="order-button-item">Suppe</span
-            ><span class="order-button-item-price">6.99 €</span>
+            ><span class="order-button-item-price">6.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Dessert', 7.5)">
             <span class="order-button-item">Dessert</span
-            ><span class="order-button-item-price">7.99 €</span>
+            ><span class="order-button-item-price">7.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Getränk', 3.5)">
             <span class="order-button-item">Getränk</span
-            ><span class="order-button-item-price">3.99 €</span>
+            ><span class="order-button-item-price">3.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Nachtisch', 5.0)">
             <span class="order-button-item">Nachtisch</span
-            ><span class="order-button-item-price">5.99 €</span>
+            ><span class="order-button-item-price">5.00€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Snack', 4.0)">
             <span class="order-button-item">Snack</span
-            ><span class="order-button-item-price">4.99 €</span>
+            ><span class="order-button-item-price">4.00€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Dessert', 7.5)">
             <span class="order-button-item">Dessert</span
-            ><span class="order-button-item-price">7.99 €</span>
+            ><span class="order-button-item-price">7.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Getränk', 3.5)">
             <span class="order-button-item">Getränk</span
-            ><span class="order-button-item-price">3.99 €</span>
+            ><span class="order-button-item-price">3.50€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Nachtisch', 5.0)">
             <span class="order-button-item">Nachtisch</span
-            ><span class="order-button-item-price">5.99 €</span>
+            ><span class="order-button-item-price">5.00€</span>
           </div>
-          <div class="order-button">
+          <div class="order-button" onclick="addItemToOrder('Snack', 4.0)">
             <span class="order-button-item">Snack</span
-            ><span class="order-button-item-price">4.99 €</span>
+            ><span class="order-button-item-price">4.00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Chips', 4.0)">
+            <span class="order-button-item">Chips</span
+            ><span class="order-button-item-price">4.00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Snack', 4.0)">
+            <span class="order-button-item">Snack</span
+            ><span class="order-button-item-price">4.00€</span>
+          </div>
+          <div class="order-button" onclick="addItemToOrder('Snack', 4.0)">
+            <span class="order-button-item">Snack</span
+            ><span class="order-button-item-price">4.00€</span>
           </div>
         </div>
-        <div class="total-container"><span>Gesamt</span><span>0,00€</span></div>
+        <div class="total-container">
+          <span>Gesamt</span><span id="total-value">0,00€</span>
+        </div>
         <div class="checkout-container">
-          <div class="button" id="reset">Zurücksetzen</div>
+          <div class="button" id="reset" onclick="reset()">Zurücksetzen</div>
           <div class="checkout-location-container">
-            <div class="button" id="inhouse">Vor Ort</div>
-            <div class="button" id="delivery">Lieferung</div>
+            <div class="button" id="inhouse" onclick="checkoutInHouse()">
+              Vor Ort
+            </div>
+            <div class="button" id="delivery" onclick="checkoutDelivery()">
+              Lieferung
+            </div>
           </div>
         </div>
       </div>
-      <div class="orders-container"></div>
+      <div class="orders-container">
+        <h1>Bestellung</h1>
+        <div id="orders-items" class="orders-items"></div>
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
