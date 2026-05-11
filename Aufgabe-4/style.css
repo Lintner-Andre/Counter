@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 2rem;
+  background-color: blue;
+}
+
+.calculator-container {
+  width: 100%;
+  background-color: aqua;
+}
+
+.orders-container {
+  width: 350px;
+  background-color: red;
+}
+
+.order-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  background-color: yellow;
+}
+
+.order-button {
+  min-height: 100px;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.order-button-item-price {
+  color: blue;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-container {
+  background-color: blueviolet;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.checkout-location-container {
+  background-color: brown;
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+}
